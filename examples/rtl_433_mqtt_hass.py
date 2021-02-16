@@ -210,6 +210,17 @@ mappings = {
         }
     },
 
+    "wind_average_km_h": {
+        "device_type": "sensor",
+        "object_suffix": "WS",
+        "config": {
+            "device_class": "weather",
+            "name": "Wind Speed",
+            "unit_of_measurement": "km/h",
+            "value_template": "{{ value|float }}"
+        }
+    },
+
     "wind_avg_km_h": {
         "device_type": "sensor",
         "object_suffix": "WS",
@@ -317,8 +328,8 @@ mappings = {
         "object_suffix": "RT",
         "config": {
             "name": "Rain Total",
-            "unit_of_measurement": "mm",
-            "value_template": "{{ float(value|float) * 25.4 | round(2) }}"
+            "unit_of_measurement": "in",
+            "value_template": "{{ value|float }}"
         }
     },
 
